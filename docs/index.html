@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retinue Launcher</title>
+<meta name="description" content="Install, update and launch CastGuidance PCB Toolkit, FishLadder and EyeOpener Lite from one Windows launcher.">
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1b2128; --muted:#5b6672; --line:#dde2e8; --accent:#c97a06; --accent-ink:#2a1a00; --link:#1f5fbf; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1317; --card:#171c22; --ink:#e4e9ee; --muted:#8c98a5; --line:#28303a; --accent:#f2a93b; --accent-ink:#2a1a00; --link:#7fb4ff; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 "Segoe UI", system-ui, sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:2rem; margin:0 0 6px; }
+  .lead { color:var(--muted); font-size:1.1rem; margin:0 0 24px; }
+  .btn { display:inline-block; background:var(--accent); color:var(--accent-ink); font-weight:600; padding:12px 22px; border-radius:10px; text-decoration:none; }
+  .note { color:var(--muted); font-size:.92rem; margin:10px 0 0; }
+  .tools { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:28px 0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; }
+  .card p { margin:0 0 8px; color:var(--muted); font-size:.95rem; }
+  a { color:var(--link); }
+  h2 { font-size:1.25rem; margin:32px 0 8px; }
+  ol { padding-left:20px; }
+  footer { color:var(--muted); font-size:.85rem; margin-top:40px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Retinue Launcher</h1>
+  <p class="lead">One Windows app to install, update and launch the PCB engineering tools. Nothing is installed until you choose it.</p>
+
+  <a class="btn" href="https://github.com/otac0011/RetinueLauncher-Releases/releases/latest">Download for Windows</a>
+  <p class="note">Windows 10/11, 64-bit · about 36 MB · free to use (<a href="https://github.com/otac0011/RetinueLauncher-Releases/blob/main/LICENSE">license</a>).
+    The installer is not code-signed yet: if SmartScreen says "Windows protected your PC", choose <b>More info → Run anyway</b>.</p>
+
+  <section class="tools" aria-label="Tools it installs">
+    <div class="card"><h3>CastGuidance PCB Toolkit</h3><p>Around 50 PCB calculators and wizards: impedance, stackups, SI, PI, RF, thermal.</p><a href="https://github.com/otac0011/CastGuidance_PCB_Toolkit">Release page</a></div>
+    <div class="card"><h3>FishLadder</h3><p>RF impedance matching for people who have never designed a matching network.</p><a href="https://github.com/otac0011/FishLadder-Releases">Release page</a></div>
+    <div class="card"><h3>EyeOpener Lite</h3><p>Guided signal- and power-integrity checks for ODB++ boards.</p><a href="https://github.com/otac0011/EyeOpenerLite-Releases">Release page</a></div>
+  </section>
+
+  <h2>How installing a tool works</h2>
+  <ol>
+    <li>Open <b>Available tools</b>: each tool shows Not installed, Installed, Update available or No release yet.</li>
+    <li>Press <b>Install</b>. The launcher downloads the tool's installer from its own release page, without an account or token.</li>
+    <li>It checks the download's size and SHA-256 digest against the release, and discards it if either differs.</li>
+    <li>The tool's own installer runs and shows that tool's license for you to accept.</li>
+  </ol>
+  <p>Installed tools launch from the same window, offline too.</p>
+
+  <footer>© 2026 Retinue Launcher Developer. Closed source, free to use. Bugs: <a href="https://github.com/otac0011/RetinueLauncher-Releases/issues">issues</a>.</footer>
+</main>
+</body>
+</html>
